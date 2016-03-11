@@ -1,0 +1,11 @@
+<h1><%= @book.title %> - $<%= @book.price%></h1>
+<div class="fixer">
+<%= image_tag @book.photo_url%>
+
+</div>
+<p>
+  <%=@book.author.full_name%>
+</p>
+
+<%= link_to "Edit", edit_book_path(id: @book.id), class: "btn btn-default"%>
+<%= link_to "Delete", book_path(id: @book.id), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete?"}%>

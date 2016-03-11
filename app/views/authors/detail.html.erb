@@ -1,0 +1,6 @@
+<h1><%=@author.full_name%></h1>
+<p>
+  <%=@author.bio%>
+</p>
+
+<%= link_to "Edit", edit_author_path(id: @author.id), class: "btn btn-default"%>
